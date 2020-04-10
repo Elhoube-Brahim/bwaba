@@ -1,0 +1,60 @@
+/* ########################## 404 ########################## */
+
+.not-found {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+
+    .image {
+      height: 400px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h2 {
+      padding: 40px;
+      font-size: 2rem;
+      color: $primary_color;
+      text-align: center;
+    }
+
+    button {
+      padding: 20px;
+      background-color: $primary_color;
+      border: 1px darken($primary_color, 10);
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 0 0 2px lighten($primary_color, 40);
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        background-color: lighten($primary_color, 10);
+      }
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .not-found {
+    .container {
+      padding: 0;
+      padding-bottom: 50px;
+  
+      .image {
+        height: 200px;
+        padding: 20px;
+      }
+  
+      h2 {
+        padding: 20px;
+        padding-bottom: 40px;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

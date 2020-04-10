@@ -1,0 +1,77 @@
+/* ########################## Contact ########################## */
+
+.contact {
+  padding: 20px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $primary_color;
+  }
+
+  .contact-form {
+    width: 60%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px $primary_color solid;
+    transition: .3s all ease-in-out;
+    flex-direction: column;
+
+    &:hover {
+      box-shadow: 0 0 0 3px lighten($primary_color, 40);
+    }
+
+    label {
+      margin-inline-start: 15px;
+    }
+
+    .input {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px $primary_color solid;
+      color: #777;
+      transition: .3s all ease-in-out;
+
+      &:focus {
+        box-shadow: 0 0 0 2px lighten($primary_color, 40);
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 250px;
+    }
+
+    .send {
+      padding: 20px;
+      background-color: $primary_color;
+      border: 1px darken($primary_color, 10);
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      transition: .3s all ease-in-out;
+
+      &:hover {
+        background-color: lighten($primary_color, 10);
+      }
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .contact {
+  
+    .contact-form {
+      width: 100%;
+      padding: 10px;
+  
+      label {
+        margin-inline-start: 0;
+      }
+    }
+  }
+}

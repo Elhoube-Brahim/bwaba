@@ -1,0 +1,203 @@
+/* ########################## Login ########################## */
+
+.login {
+
+  .container {
+    margin: 5rem 0;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+      border-radius: 10px;
+      background-color: #fff;
+      width: 500px;
+
+      .tab-headers {
+
+        .tab-header {
+          padding: 20px;
+          width: 50%;
+          border-bottom: 1px #ddd solid;
+          cursor: pointer;
+          transition: .3s all ease-in-out;
+          text-align: center;
+          font-weight: bold;
+          color: $primary_color;
+
+          &.active {
+            box-shadow: inset -5px 0 5px #ddd;
+
+            &:not(:last-child) {
+              box-shadow: inset 5px 0 5px #ddd;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        padding: 20px;
+        padding-top: 10px;
+
+        .tab {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+
+        .login-tab {
+          flex-direction: column;
+          align-items: center;
+
+          .input-gp {
+            width: 100%;
+            position: relative;
+    
+            label {
+              margin-inline-start: 10px;
+            }
+    
+            .input {
+              width: 100%;
+              padding: 15px;
+              margin-bottom: 10px;
+              border-radius: 7px;
+              border: 1px #ddd solid;
+              transition: .3s all ease-in-out;
+              padding-inline-end: 40px;
+              color: #777;
+    
+              &:focus {
+                box-shadow: 0 0 0 2px $secondary_color;
+              }
+
+              &.email {
+                padding-inline-end: 0;
+                padding-inline-start: 40px;
+              }
+            }
+    
+            i {
+              position: absolute;
+              top: 50%;
+              left: 15px;
+              font-size: 24px;
+              color: darken($secondary_color, 20);
+    
+              &.show-pwd {
+                left: 12px;
+                cursor: pointer;
+              }
+            }
+          }
+    
+          .forgotten {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: -10px;
+            margin-bottom: 15px;
+            font-size: 80%;
+
+            .remember {
+              padding-inline-start: 15px;
+              
+              label {
+                cursor: pointer;
+              }
+            }
+    
+            a {
+              color: $primary_color;
+    
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+    
+          .login-btns {
+            justify-content: space-between;
+            width: 100%;
+            text-align: center;
+
+            .login-btn {
+              width: 100%;
+              padding: 15px;
+              border-radius: 10px;
+              background-color: $primary_color;
+              color: #fff;
+              border: none;
+              cursor: pointer;
+              box-shadow: 0 3px lighten($primary_color, 35);
+              transition: .3s all ease-in-out;
+      
+              &:hover,
+              &:active {
+                background-color: darken($primary_color, 10);
+                box-shadow: none;
+              }
+              
+              &.facebook {
+                background-color: $facebook_color;
+                box-shadow: none;
+
+                &:hover,
+                &:active {
+                  background-color: darken($facebook_color, 10);
+                }
+
+                i {
+                  margin-left: 10px;
+                }
+              }
+
+              &.google {
+                background-color: $google_color;
+                box-shadow: none;
+
+                &:hover,
+                &:active {
+                  background-color: darken($google_color, 10);
+                }
+
+                i {
+                  margin-left: 10px;
+                }
+              }
+            }
+
+            .or {
+              margin-top: 20px;
+              justify-content: space-between;
+
+              button {
+                width: 48%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: $sm-screen) {
+  .login {
+    .container {
+      .login-form {
+        .tab-content {
+          .login-tab {
+            .login-btns {
+              .login-btn {
+                width: 100%;
+                margin-bottom: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

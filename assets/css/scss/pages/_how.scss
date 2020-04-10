@@ -1,0 +1,120 @@
+/* ########################## How It Works ########################## */
+
+.how {
+  .head {
+    height: 400px;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px #ddd solid;
+
+    .image {
+      width: 50%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .title {
+      width: 50%;
+      text-align: center;
+
+      h2 {
+        color: $primary_color;
+        font-size: 5rem;
+        line-height: initial;
+      }
+
+      p {
+        color: #777;
+      }
+    }
+  }
+
+  .content {
+    margin-bottom: 50px;
+    .container {
+      .step {
+        position: relative;
+        width: 49%;
+        margin: .5%;
+        text-align: center;
+        padding: 20px;
+        border: 1px $primary_color solid;
+        border-radius: 10px;
+        transition: .3s all ease-in-out;
+
+        &:hover {
+          box-shadow: 0 0 0 3px lighten($primary_color, 40);
+        }
+
+        .number {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 2rem;
+          border-radius: 50%;
+          background-color: $primary_color;
+          color: #fff;
+          height: 48px;
+          width: 48px;
+          padding: 10px;
+          box-shadow: 0 0 0 3px lighten($primary_color, 40);
+        }
+
+        .image {
+          height: 200px;
+          width: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+
+        .title {
+          padding: 10px;
+          font-size: 3rem;
+          line-height: initial;
+          color: $primary_color;
+        }
+
+        p {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .how {
+    .head {
+      height: auto;
+      
+  
+      .image {
+        width: 100%;
+      }
+  
+      .title {
+        width: 100%;
+  
+        h2 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  
+    .content {
+      .container {
+        .step {
+          width: 100%;
+          margin: 1%;
+        }
+      }
+    }
+  }
+}
