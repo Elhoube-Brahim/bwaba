@@ -6,6 +6,8 @@ This project contain 3 folders :
 - assets
 - layout
 
+> I use .php extension for my files just for including header & footer, Other than that all files are wrotten by html, You can use inspect tools on your browser to know classes & their styles
+
 ## Root file
 
 It Contains the design of some important pages like :
